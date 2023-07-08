@@ -11,18 +11,19 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.brown[50],
         body: Padding(
-          padding: EdgeInsets.only(top: 70, right: 15, left: 15),
+          padding: EdgeInsets.only(top: 30, right: 15, left: 15),
           child: Column(children: [
             Center(
               child: Container(
-                height: 300,
+                height: 250,
+                width: 450,
                 decoration: BoxDecoration(
+                  color: Color(0x98D2FFFF),
                   borderRadius: BorderRadius.circular(40.0),
                   // Set the desired border radius value
                   image: DecorationImage(
                     image: NetworkImage(
-                      'https://img.freepik.com/premium-vector/personal-profile-document-with-photo-id-my-account-icon-isolated-flat-cartoon_101884-748.jpg',
-                    ),
+                        'https://static.vecteezy.com/system/resources/previews/002/406/611/original/business-man-cartoon-character-vector.jpg'),
                     fit: BoxFit.fill,
                   ),
                 ),
@@ -41,8 +42,9 @@ class MyApp extends StatelessWidget {
                   "John Roberts",
                   style: TextStyle(
                       fontSize: 40,
+                      fontFamily: 'CustomFont',
                       fontWeight: FontWeight.bold,
-                      fontStyle: FontStyle.italic),
+                      wordSpacing: 8),
                 )
               ],
             ),
@@ -50,7 +52,10 @@ class MyApp extends StatelessWidget {
               children: [
                 Text(
                   "jwefjd ebjwg4erjbjbgnei",
-                  style: TextStyle(fontSize: 20, color: Colors.black38),
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontFamily: 'CustomFont',
+                      color: Colors.black38),
                 ),
               ],
             ),
@@ -58,7 +63,10 @@ class MyApp extends StatelessWidget {
               children: [
                 Text(
                   "jwefjd ebjwgvegt4eolnei",
-                  style: TextStyle(fontSize: 20, color: Colors.black38),
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontFamily: 'CustomFont',
+                      color: Colors.black38),
                 ),
               ],
             ),
@@ -75,18 +83,30 @@ class MyApp extends StatelessWidget {
                   borderRadius: BorderRadius.circular(30),
                   color: Colors.grey[300]),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.baseline,
                 textBaseline: TextBaseline.alphabetic,
                 children: [
-                  Text(
-                    "112 ",
-                    style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.baseline,
+                    textBaseline: TextBaseline.alphabetic,
+                    children: [
+                      Text(
+                        "112 ",
+                        style: TextStyle(
+                            fontFamily: 'CustomFont',
+                            fontSize: 40,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        "works",
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontFamily: 'CustomFont',
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ],
                   ),
-                  Text(
-                    "works",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(width: 80),
                   Stack(alignment: Alignment.topRight, children: [
                     Container(
                       margin: EdgeInsets.only(right: 5),
@@ -139,6 +159,7 @@ class MyApp extends StatelessWidget {
               ],
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
                   margin: EdgeInsets.only(right: 50),
@@ -156,6 +177,7 @@ class MyApp extends StatelessWidget {
                             "3",
                             style: TextStyle(
                                 fontSize: 40,
+                                fontFamily: 'CustomFont',
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white),
                           )
@@ -168,6 +190,7 @@ class MyApp extends StatelessWidget {
                           Text(
                             "applications",
                             style: TextStyle(
+                                fontFamily: 'CustomFont',
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white),
@@ -197,6 +220,7 @@ class MyApp extends StatelessWidget {
                             "25",
                             style: TextStyle(
                                 fontSize: 30,
+                                fontFamily: 'CustomFont',
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black),
                           )
@@ -210,6 +234,7 @@ class MyApp extends StatelessWidget {
                             "views today",
                             style: TextStyle(
                                 fontSize: 14,
+                                fontFamily: 'CustomFont',
                                 fontWeight: FontWeight.bold,
                                 color: Colors.grey),
                           )
@@ -229,34 +254,36 @@ class MyApp extends StatelessWidget {
             ),
             Row(
               children: [
-                Container(
-                  margin: EdgeInsets.symmetric(horizontal: 5),
-                  height: 85,
-                  width: 350,
-                  decoration: BoxDecoration(
-                      color: Colors.white60,
-                      borderRadius: BorderRadius.circular(30)),
-                  child: Padding(
-                    padding: const EdgeInsets.all(20),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Icon(
-                          Icons.person,
-                          color: Colors.indigo,
-                          size: 50,
-                        ),
-                        Icon(
-                          Icons.search,
-                          color: Colors.indigo,
-                          size: 50,
-                        ),
-                        Icon(
-                          Icons.settings,
-                          color: Colors.indigo,
-                          size: 50,
-                        )
-                      ],
+                Expanded(
+                  child: Container(
+                    margin: EdgeInsets.symmetric(horizontal: 5),
+                    height: 85,
+                    width: 350,
+                    decoration: BoxDecoration(
+                        color: Colors.white60,
+                        borderRadius: BorderRadius.circular(30)),
+                    child: Padding(
+                      padding: const EdgeInsets.all(20),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Icon(
+                            Icons.person,
+                            color: Colors.indigo,
+                            size: 50,
+                          ),
+                          Icon(
+                            Icons.search,
+                            color: Colors.indigo,
+                            size: 50,
+                          ),
+                          Icon(
+                            Icons.settings,
+                            color: Colors.indigo,
+                            size: 50,
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 )
