@@ -49,7 +49,7 @@ class MyApp extends StatelessWidget {
                         child: Center(
                           child: Icon(
                             Icons.linear_scale_rounded,
-                            color: Colors.black,
+                            color: Colors.black87,
                             size: 30,
                           ),
                         ),
