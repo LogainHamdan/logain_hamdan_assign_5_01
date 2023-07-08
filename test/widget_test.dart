@@ -8,7 +8,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:logain_hamdan_assign_5_01/main.dart';
+import 'package:logain_hamdan_assign_5_01/page1.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {

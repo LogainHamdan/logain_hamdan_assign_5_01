@@ -51,22 +51,24 @@ class MyApp extends StatelessWidget {
             Row(
               children: [
                 Text(
-                  "jwefjd ebjwg4erjbjbgnei",
+                  "Photographer. Work experience 7 years.",
                   style: TextStyle(
                       fontSize: 20,
                       fontFamily: 'CustomFont',
-                      color: Colors.black38),
+                      fontWeight: FontWeight.bold,
+                      color: Color(0x6F000000)),
                 ),
               ],
             ),
             Row(
               children: [
                 Text(
-                  "jwefjd ebjwgvegt4eolnei",
+                  "I make nature and product photography.",
                   style: TextStyle(
                       fontSize: 20,
                       fontFamily: 'CustomFont',
-                      color: Colors.black38),
+                      fontWeight: FontWeight.bold,
+                      color: Color(0x6F000000)),
                 ),
               ],
             ),
@@ -113,7 +115,7 @@ class MyApp extends StatelessWidget {
                       height: 70,
                       width: 70,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
+                          borderRadius: BorderRadius.circular(25),
                           border: Border.all(color: Colors.white, width: 5),
                           image: DecorationImage(
                               fit: BoxFit.cover,
@@ -126,7 +128,7 @@ class MyApp extends StatelessWidget {
                       height: 70,
                       width: 70,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
+                          borderRadius: BorderRadius.circular(25),
                           border: Border.all(color: Colors.white, width: 5),
                           image: DecorationImage(
                               fit: BoxFit.cover,
@@ -139,7 +141,7 @@ class MyApp extends StatelessWidget {
                       height: 70,
                       width: 70,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
+                          borderRadius: BorderRadius.circular(25),
                           border: Border.all(color: Colors.white, width: 5),
                           image: DecorationImage(
                               fit: BoxFit.cover,
@@ -167,7 +169,7 @@ class MyApp extends StatelessWidget {
                   width: 150,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
-                      color: Colors.indigo),
+                      color: Color(0xFF181A49)),
                   child: Column(
                     children: [
                       Row(
@@ -256,33 +258,40 @@ class MyApp extends StatelessWidget {
               children: [
                 Expanded(
                   child: Container(
-                    margin: EdgeInsets.symmetric(horizontal: 5),
-                    height: 85,
+                    margin: EdgeInsets.only(bottom: 12),
+                    height: 75,
                     width: 350,
                     decoration: BoxDecoration(
-                        color: Colors.white60,
+                        color: Colors.grey,
                         borderRadius: BorderRadius.circular(30)),
                     child: Padding(
                       padding: const EdgeInsets.all(20),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Icon(
-                            Icons.person,
-                            color: Colors.indigo,
-                            size: 50,
-                          ),
-                          Icon(
-                            Icons.search,
-                            color: Colors.indigo,
-                            size: 50,
-                          ),
-                          Icon(
-                            Icons.settings,
-                            color: Colors.indigo,
-                            size: 50,
-                          )
-                        ],
+                      child: Center(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Icon(
+                                  Icons.person,
+                                  color: Color(0xFF181A49),
+                                  size: 30,
+                                ),
+                              ],
+                            ),
+                            Icon(
+                              Icons.search,
+                              color: Colors.black,
+                              size: 30,
+                            ),
+                            Icon(
+                              Icons.settings,
+                              color: Colors.black,
+                              size: 30,
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   ),
